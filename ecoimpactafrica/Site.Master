@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="ecoimpactafrica.SiteMaster" %>
+ 
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head runat="server">
+<%--toastr--%>
+<!-- Other head elements -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><%: Page.Title %> - FootPrint Tracker App</title>
+ 
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<style>
+        body {
+            padding-top: 56px;
+            background-color: lavender;
+            font-family: 'Arial', sans-serif;
+        }
+ 
+         
+        .navbar-brand img {
+            max-height: 40px;
+        }
+ 
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+ 
+        .container {
+            margin-top: 10px;
+        }
+ 
+        footer {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+<form runat="server">
+<asp:ScriptManager runat="server"></asp:ScriptManager>
+ 
+      
+<nav class="navbar navbar-expand-lg bg-success fixed-top " style="background-color: #0F2A52 !important;">
+<div class="container style="background-color:darkgreen">
+<a class="navbar-brand" runat="server" href="/">
+
+<a class="nav-link" runat="server" href="~/" style ="color:blanchedalmond">Home</a>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:white">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+
+</li>
+<li class="nav-item">
+<a class="nav-link" runat="server" href="~/About">About Us</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" runat="server" href="~/Contact">Contact</a>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Calculate
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" runat="server" href="~/Transport.aspx">Calculate for Transport</a>
+<a class="dropdown-item" runat="server" href="~/Electricityconsumption.aspx">Calculate  for Electricity</a>
+<a class="dropdown-item" runat="server" href="~/Reportpage.aspx">View Data</a>
+
+</li>
+<li class="nav-item">
+<a class="nav-link" runat="server" href="~/Account/Login">Log in</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+ 
+        <!-- Main Content -->
+<div class="container mt-5">
+<asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+</div>
+ 
+      
+</form>
+   
+ 
+    <!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
